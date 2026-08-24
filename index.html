@@ -155,110 +155,112 @@
         <!-- RIGHT IMAGE AREA -->
         <div class="relative flex justify-center">
           <!-- IMAGE WRAPPER -->
-          <div class="relative flex items-center w-[378px] h-[383px]">
-            <!-- YELLOW BLOCK -->
-            <div
-              class="top-0 left-0 absolute bg-[#ffd45d] w-[56px] h-full"
-            ></div>
+       <div class="relative flex items-center w-full max-w-[378px] h-[383px]">
 
-            <!-- IMAGE -->
-            <div
-              class="top-0 left-[56px] absolute w-[266px] h-full overflow-hidden"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=700&q=80"
-                alt="Lawyer consultation"
-                class="w-full h-full object-cover"
-              />
-            </div>
+  <!-- YELLOW BLOCK -->
+  <div
+    class="top-0 left-0 absolute bg-[#ffd45d] w-[56px] h-full"
+  ></div>
 
-            <!-- GREEN BLOCK -->
-            <div
-              class="top-0 right-0 absolute bg-[#008153] w-[56px] h-full"
-            ></div>
+  <!-- IMAGE -->
+  <div
+    class="top-0 left-[56px] absolute w-[266px] h-full overflow-hidden"
+  >
+    <img
+      src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=700&q=80"
+      alt="Lawyer consultation"
+      class="w-full h-full object-cover"
+    />
+  </div>
 
-            <!-- PLAY BUTTON -->
-            <div
-              class="-top-[42px] left-[50%] z-20 absolute flex justify-center items-center bg-[#0b0f0d] rounded-full w-[84px] h-[84px] -translate-x-1/2"
-            >
-              <span class="ml-1 text-[23px] text-white"> ▶ </span>
-            </div>
+  <!-- GREEN BLOCK -->
+  <div
+    class="top-0 right-0 absolute bg-[#008153] w-[56px] h-full"
+  ></div>
 
-            <!-- CIRCLE TEXT -->
-            <div
-              class="-top-[70px] left-[50%] z-10 absolute w-[145px] h-[145px] -translate-x-1/2"
-            >
-              <svg viewBox="0 0 200 200" class="w-full h-full circle-text">
-                <defs>
-                  <path
-                    id="circlePath"
-                    d="
-                    M 100,100
-                    m -72,0
-                    a 72,72 0 1,1 144,0
-                    a 72,72 0 1,1 -144,0
-                  "
-                  />
-                </defs>
+  <!-- PLAY BUTTON -->
+  <div
+    class="-top-[42px] left-1/2 z-20 absolute flex justify-center items-center bg-[#0b0f0d] rounded-full w-[84px] h-[84px] -translate-x-1/2"
+  >
+    <span class="ml-1 text-[23px] text-white">▶</span>
+  </div>
 
-                <text
-                  fill="#111"
-                  font-size="13"
-                  font-weight="600"
-                  letter-spacing="4"
-                >
-                  <textPath href="#circlePath">
-                    WATCH OUR VIDEO • WATCH OUR VIDEO •
-                  </textPath>
-                </text>
-              </svg>
-            </div>
+  <!-- CIRCLE TEXT -->
+  <div
+    class="-top-[70px] left-1/2 z-10 absolute w-[145px] h-[145px] -translate-x-1/2"
+  >
+    <svg viewBox="0 0 200 200" class="w-full h-full circle-text">
+      <defs>
+        <path
+          id="circlePath"
+          d="
+            M 100,100
+            m -72,0
+            a 72,72 0 1,1 144,0
+            a 72,72 0 1,1 -144,0
+          "
+        />
+      </defs>
 
-            <!-- ORANGE HAND DRAWING -->
-            <div
-              class="top-[92px] -right-[75px] z-10 absolute w-[135px] h-[100px] rotate-[-8deg]"
-            >
-              <svg
-                viewBox="0 0 150 100"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                class="w-full h-full"
-              >
-                <path
-                  d="M10 62
-                   C35 30, 75 20, 120 25
-                   C140 27, 148 37, 133 45
-                   C115 54, 80 48, 54 53
-                   C30 58, 16 71, 20 79
-                   C24 88, 52 80, 80 72
-                   C110 63, 136 55, 142 65
-                   C147 75, 120 85, 94 88
-                   C67 92, 37 92, 24 85
-                   C12 78, 18 67, 35 61"
-                  stroke="#ff583d"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                />
+      <text
+        fill="#111"
+        font-size="13"
+        font-weight="600"
+        letter-spacing="4"
+      >
+        <textPath href="#circlePath">
+          WATCH OUR VIDEO • WATCH OUR VIDEO •
+        </textPath>
+      </text>
+    </svg>
+  </div>
 
-                <path
-                  d="M30 55
-                   C60 42, 90 39, 124 42
-                   C139 43, 145 48, 135 53"
-                  stroke="#ff583d"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                />
+  <!-- ORANGE SVG -->
+  <div
+    class="top-[92px] right-[-20px] md:right-[-45px] z-10 absolute w-[110px] md:w-[135px] h-[100px] rotate-[-8deg]"
+  >
+    <svg
+      viewBox="0 0 150 100"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      class="w-full h-full"
+    >
+      <path
+        d="M10 62
+        C35 30, 75 20, 120 25
+        C140 27, 148 37, 133 45
+        C115 54, 80 48, 54 53
+        C30 58, 16 71, 20 79
+        C24 88, 52 80, 80 72
+        C110 63, 136 55, 142 65
+        C147 75, 120 85, 94 88
+        C67 92, 37 92, 24 85
+        C12 78, 18 67, 35 61"
+        stroke="#ff583d"
+        stroke-width="3"
+        stroke-linecap="round"
+      />
 
-                <path
-                  d="M35 68
-                   C65 58, 99 55, 132 58"
-                  stroke="#ff583d"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                />
-              </svg>
-            </div>
-          </div>
+      <path
+        d="M30 55
+        C60 42, 90 39, 124 42
+        C139 43, 145 48, 135 53"
+        stroke="#ff583d"
+        stroke-width="2"
+        stroke-linecap="round"
+      />
+
+      <path
+        d="M35 68
+        C65 58, 99 55, 132 58"
+        stroke="#ff583d"
+        stroke-width="2"
+        stroke-linecap="round"
+      />
+    </svg>
+  </div>
+
+</div>
         </div>
       </section>
       <!-- ABOUT US SECTION -->
@@ -946,7 +948,7 @@
         <p class="mb-2 font-semibold text-[#c0e8d5]">#CTA</p>
         <h2 class="mb-4 font-bold text-4xl">Dealing With an Issue?</h2>
         <p class="mb-8 text-[#e0f2e9] text-[15px] leading-relaxed">
-        Where every injury is personal. We are a different kind of law firm. Let our small, passionate group of trial lawyers fight for your rights!
+        Where every injury is personal. We are a different kind of </br> law firm. Let our small, passionate group of trial lawyers fight for your rights!
         </p>
         <button
         class="bg-[#ff593d] hover:bg-[#e94b32] px-6 py-3 rounded font-semibold text-white transition"
