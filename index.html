@@ -43,7 +43,7 @@
 
   <body class="bg-[#fff0c9] text-[#111]">
     <!-- TOP BORDER -->
-    <div class="bg-[#0875a5] w-full h-[3px]"></div>
+    <div class="w-full h-[3px]"></div>
 
     <!-- HEADER -->
     <header class="w-full">
@@ -79,20 +79,54 @@
             <i class="ml-1 text-[10px] fa-solid fa-angle-down"></i>
           </a>
 
-          <a href="practiceAreas.html" class="hover:text-[#ff5a3c] transition-colors">
-            Practice Areas
-            <i class="ml-1 text-[10px] fa-solid fa-angle-down"></i>
-          </a>
+           <!-- Practice Areas Dropdown -->
+      <div class="relative flex items-center gap-1">
+  <!-- Link Practice Areas -->
+  <a href="practiceAreas.html" class="hover:text-[#ff5a3c] transition-colors">
+    Practice Areas
+  </a>
 
-          <a href="#" class="hover:text-[#ff5a3c] transition-colors">
+  <!-- Nút mũi tên -->
+  <button id="arrowBtn" class="transition-colors">
+    <i id="arrowIcon" class="text-[10px] transition-transform duration-300 fa-solid fa-angle-up"></i>
+  </button>
+
+  <!-- Dropdown -->
+<div id="practiceMenu" class="hidden top-[40px] left-0 z-10 absolute bg-white shadow-lg rounded-md w-48">
+  <a href="practiceAreas/divorce.html" class="block hover:bg-[#ff5a3c] px-4 py-2 text-gray-700 hover:text-white">Divorce</a>
+  <a href="practiceAreasDetail.html" class="block hover:bg-[#ff5a3c] px-4 py-2 text-gray-700 hover:text-white">Personal Injury</a>
+  <a href="practiceAreas/employment.html" class="block hover:bg-[#ff5a3c] px-4 py-2 text-gray-700 hover:text-white">Employment</a>
+  <a href="practiceAreas/immigration.html" class="block hover:bg-[#ff5a3c] px-4 py-2 text-gray-700 hover:text-white">Immigration</a>
+  <a href="practiceAreas/family.html" class="block hover:bg-[#ff5a3c] px-4 py-2 text-gray-700 hover:text-white">Family</a>
+  <a href="practiceAreas/property.html" class="block hover:bg-[#ff5a3c] px-4 py-2 text-gray-700 hover:text-white">Property</a>
+</div>
+
+</div>
+          <a href="attorneys.html" class="hover:text-[#ff5a3c] transition-colors">
             Attorneys
             <i class="ml-1 text-[10px] fa-solid fa-angle-down"></i>
           </a>
 
-          <a href="#" class="hover:text-[#ff5a3c] transition-colors">
-            Page
-            <i class="ml-1 text-[10px] fa-solid fa-angle-down"></i>
-          </a>
+         <div class="relative flex items-center gap-1">
+  <!-- Link Page -->
+  <a href="page.html" class="hover:text-[#ff5a3c] transition-colors">
+    Page
+  </a>
+
+  <!-- Nút mũi tên -->
+  <button id="pageArrowBtn" class="transition-colors">
+    <i id="pageArrowIcon" class="text-[10px] transition-transform duration-300 fa-solid fa-angle-up"></i>
+  </button>
+
+  <!-- Dropdown -->
+  <div id="pageMenu" class="hidden top-[40px] left-0 z-10 absolute bg-white shadow-lg rounded-md w-48">
+    <a href="blog.html" class="block hover:bg-[#ff5a3c] px-4 py-2 text-gray-700 hover:text-white">Blog</a>
+    <a href="contact.html" class="block hover:bg-[#ff5a3c] px-4 py-2 text-gray-700 hover:text-white">Contact</a>
+    <a href="faq.html" class="block hover:bg-[#ff5a3c] px-4 py-2 text-gray-700 hover:text-white">FAQ</a>
+    <a href="error.html" class="block hover:bg-[#ff5a3c] px-4 py-2 text-gray-700 hover:text-white">404</a>
+    <a href="coming.html" class="block hover:bg-[#ff5a3c] px-4 py-2 text-gray-700 hover:text-white">Coming Soon</a>
+  </div>
+        </div>
         </nav>
 
         <!-- PHONE -->
@@ -113,7 +147,25 @@
 
       </div>
     </header>
+<script>
+  const arrowBtn = document.getElementById("arrowBtn");
+  const practiceMenu = document.getElementById("practiceMenu");
+  const arrowIcon = document.getElementById("arrowIcon");
 
+  const pageArrowBtn = document.getElementById("pageArrowBtn");
+  const pageMenu = document.getElementById("pageMenu");
+  const pageArrowIcon = document.getElementById("pageArrowIcon");
+
+  arrowBtn.addEventListener("click", function () {
+    practiceMenu.classList.toggle("hidden");
+    arrowIcon.classList.toggle("rotate-180"); // xoay mũi tên
+  });
+
+  pageArrowBtn.addEventListener("click", function () {
+    pageMenu.classList.toggle("hidden");
+    pageArrowIcon.classList.toggle("rotate-180"); // xoay mũi tên
+  });
+</script>
     <!-- HERO -->
     <main>
       <section
@@ -1032,4 +1084,5 @@
     </div>
     </footer>
   </body>
+</html>
 </html>

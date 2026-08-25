@@ -43,7 +43,7 @@
 
   <body class="bg-[#fff0c9] text-[#111]">
     <!-- TOP BORDER -->
-    <div class="bg-[#0875a5] w-full h-[3px]"></div>
+    <div class="w-full h-[3px]"></div>
 
     <!-- HEADER -->
      <header class="w-full">
@@ -82,7 +82,7 @@
            <!-- Practice Areas Dropdown -->
       <div class="relative flex items-center gap-1">
   <!-- Link Practice Areas -->
-  <a href="practiceAreas.html" class="font-medium text-[#ff5a3c]">
+  <a href="practiceAreas.html" class="text-[#ff5a3c] hfont-medium">
     Practice Areas
   </a>
 
@@ -147,65 +147,112 @@
 
       </div>
     </header>
+<script>
+  const arrowBtn = document.getElementById("arrowBtn");
+  const practiceMenu = document.getElementById("practiceMenu");
+  const arrowIcon = document.getElementById("arrowIcon");
 
+  const pageArrowBtn = document.getElementById("pageArrowBtn");
+  const pageMenu = document.getElementById("pageMenu");
+  const pageArrowIcon = document.getElementById("pageArrowIcon");
+
+  arrowBtn.addEventListener("click", function () {
+    practiceMenu.classList.toggle("hidden");
+    arrowIcon.classList.toggle("rotate-180"); // xoay mũi tên
+  });
+
+  pageArrowBtn.addEventListener("click", function () {
+    pageMenu.classList.toggle("hidden");
+    pageArrowIcon.classList.toggle("rotate-180"); // xoay mũi tên
+  });
+</script>
     <!-- HERO -->
-    <main>
-
-      <section class="bg-[#fff0c9] py-16 text-center">
-  <!-- Heading -->
-  <div class="mb-2 text-gray-700 text-sm uppercase tracking-wide">#Practice Areas</div>
-  <h2 class="mb-4 font-extrabold text-gray-900 text-5xl">
-    Our Practice Areas to Serve You
-  </h2>
-  <p class="mx-auto max-w-2xl text-gray-700">
-    Where every injury is personal. We are a different kind of law firm. Let our small, passionate group of trial lawyers fight for your rights!
-  </p>
-      </section>
-
-      <section class="bg-white py-16 text-center">
-  <h2 class="mb-4 font-extrabold text-gray-900 text-4xl">Our Practice Areas</h2>
-  <p class="mx-auto mb-12 max-w-xl text-gray-600">
-    Our Law Office provides a professional experience for all our clients, helping them navigate their legal rights.
-  </p>
-
-  <div class="gap-8 grid grid-cols-1 md:grid-cols-3 px-10">
-    <!-- Personal Injury Law -->
-    <div class="bg-white shadow-lg mx-auto rounded-lg w-[370px] overflow-hidden">
-      <img src="asset/imgs/practiceAreas/1.jpg" alt="Personal Injury Law" class="w-full h-[370px] object-cover">
-      <div class="bg-orange-500 py-3 font-semibold text-white">Personal Injury Law</div>
+    <main class="bg-white">
+    <section class="flex md:flex-row flex-col gap-10 bg-white mx-auto px-6 py-10 max-w-[1000px]">
+  <!-- Cột trái: ảnh và thông tin -->
+  <div class="flex flex-col items-center p-8 rounded-lg md:w-[300px] text-black text-sm">
+    <img src="asset/imgs/attorneysProfile/1.jpg" alt="Jamie Watts" class="shadow-lg mb-6 rounded-lg w-[250px]" />
+    <div class="space-y-2 text-clip">
+        <h2 class="mb-1 font-bold text-2xl">Jamie Watts</h2>
+    <p class="mb-4 text-gray-500 text">Partner</p>
+    <p><span class="font-semibold">Phone:</span> <a href="tel:0001234567" class="text-gray-500 hover:text-[#f25c33]">(000) 123-4567</a></p>
+    <p><span class="font-semibold">Email:</span> <a href="mailto:davidwarner@gmail.com" class="text-gray-500 hover:text-[#f25c33]">davidwarner@gmail.com</a></p>
+    <p><span class="font-semibold">Fax:</span> <span class="text-gray-500">(000) 123-4567</span></p>
     </div>
-
-    <!-- Employment Law -->
-    <div class="bg-white shadow-lg mx-auto rounded-lg w-[370px] overflow-hidden">
-      <img src="asset/imgs/practiceAreas/2.jpg" alt="Employment Law" class="w-full h-[370px] object-cover">
-      <div class="bg-gray-100 py-3 font-semibold text-gray-900">Employment Law</div>
-    </div>
-
-    <!-- Immigration Law -->
-    <div class="bg-white shadow-lg mx-auto rounded-lg w-[370px] overflow-hidden">
-      <img src="asset/imgs/practiceAreas/3.jpg" alt="Immigration Law" class="w-full h-[370px] object-cover">
-      <div class="bg-gray-100 py-3 font-semibold text-gray-900">Immigration Law</div>
-    </div>
-
-    <!-- Family Law -->
-    <div class="bg-white shadow-lg mx-auto rounded-lg w-[370px] overflow-hidden">
-      <img src="asset/imgs/practiceAreas/4.jpg" alt="Family Law" class="w-full h-[370px] object-cover">
-      <div class="bg-gray-100 py-3 font-semibold text-gray-900">Family Law</div>
-    </div>
-
-    <!-- Divorce Law -->
-    <div class="bg-white shadow-lg mx-auto rounded-lg w-[370px] overflow-hidden">
-      <img src="asset/imgs/practiceAreas/5.jpg" alt="Divorce Law" class="w-full h-[370px] object-cover">
-      <div class="bg-gray-100 py-3 font-semibold text-gray-900">Divorce Law</div>
-    </div>
-
-    <!-- Property Law -->
-    <div class="bg-white shadow-lg mx-auto rounded-lg w-[370px] overflow-hidden">
-      <img src="asset/imgs/practiceAreas/6.jpg" alt="Property Law" class="w-full h-[370px] object-cover">
-      <div class="bg-gray-100 py-3 font-semibold text-gray-900">Property Law</div>
+    
+    <div class="flex gap-4 mt-6">
+      <a href="#" class="bg-[#000] hover:bg-[#f25c33] p-3 rounded text-white hover:text-white transition duration-300"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="bg-[#000] hover:bg-[#f25c33] p-3 rounded text-white hover:text-white transition duration-300"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#" class="bg-[#000] hover:bg-[#f25c33] p-3 rounded text-white hover:text-white transition duration-300"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="bg-[#000] hover:bg-[#f25c33] p-3 rounded text-white hover:text-white transition duration-300"><i class="fab fa-instagram"></i></a>
     </div>
   </div>
-      </section>
+
+  <!-- Cột phải: nội dung chi tiết -->
+  <div class="flex-1">
+    <h2 class="mb-6 font-bold text-black text-3xl">Biography</h2>
+    <p class="mb-6 text-gray-500 leading-relaxed">
+      Jamie Watts is a highly experienced energy and communications attorney who represents a broad range of regulated entities and stakeholders across Louisiana. Jamie’s clients include customers of electric utilities, a regional transmission organization, telecom and broadband providers, a local natural gas utility, common carriers, maritime pilots and non-profit public entities (including the Louisiana Utilities Restoration Corporation), as well as major industrial, retail and technology companies. Jamie advises clients on the full spectrum of regulatory compliance issues and commercial transactions involving electricity produced and distributed from traditional and renewable sources and securitization of system-restoration costs. She also routinely represents entities before the Louisiana Public Service Commission, the New Orleans City Council and the Federal Energy Regulatory Commission (FERC) on rate cases, change of control applications and related matters. </p>
+       <p class="mb-6 text-gray-500 leading-relaxed">
+      Jamie understands her clients’ strategic objectives and the value of the products and services they deliver to the broader community, and helps develop solutions that identify and achieve mutual goals. Jamie’s broad client base (which ranges from Fortune 500 enterprises to local utilities and businesses) is another key asset: She regularly adopts lessons learned in one arena to help executives identify, manage and minimize potential risks in their own businesses.
+</p>
+       <p class="mb-6 text-gray-500 leading-relaxed">
+      Recognized as a leading lawyer by Chambers and Partners and other legal and industry ratings agencies, Jamie also is a familiar and respected presence in corporate boardrooms and in the offices of state regulatory agencies and local governments. She understands the priorities of elected and appointed officials as well as the internal processes of the departments they lead. Jamie draws on this knowledge to help clients navigate complex application, approval and compliance procedures and resolve disputes early and effectively. Jamie also has significant experience in estate planning and succession matters, and regularly supervises the work of attorneys at the firm who assist her in providing these services.</p>
+       <p class="mb-6 text-gray-500 leading-relaxed">
+      While in law school, Jamie served a clerkship for Long Law Firm and other private and public legal departments; today, she serves as Co-Managing Partner for the firm</p>
+
+    <h2 class="mb-2 font-semibold text-2xl">Education</h2>
+    <ul class="mb-6 pl-6 text-gray-500 list-disc">
+      <li>J.D., Loyola University Chicago School of Law</li>
+      <li>B.A., University of Southern California, Cum Laude</li>
+    </ul>
+
+    <h2 class="mb-2 font-semibold text-2xl">Practice Areas</h2>
+    <ul class="mb-6 pl-6 text-gray-500 list-disc">
+      <li>Administrative Law: Regulated Entities</li>
+      <li>Business Structure & Transactions</li>
+      <li>Estate Planning & Successions</li>
+      <li>Utilities: Energy & Telecommunications</li>
+    </ul>
+
+    <h2 class="mb-2 font-semibold text-2xl">Experience</h2>
+    <ul class="mb-6 pl-6 text-gray-500 list-disc">
+      <li>Successfully argued appeal to maintain summary judgment in favor of large sporting goods supplier...</li>
+      <li>Defense verdict in favor of major land development company...</li>
+      <li>Defense verdict for a regional bank accused of violating the federal Fair Credit Reporting Act...</li>
+      <li>Jury trial verdict in favor of local construction company...</li>
+    </ul>
+
+    <h2 class="mb-2 font-semibold text-2xl">Awards & Leadership Roles</h2>
+    <ul class="mb-6 pl-6 text-gray-500 list-disc">
+      <li>Mentor, Association of Trial Advocates (ADTA)</li>
+      <li>Recipient, The New South Lawyers Top 100 Award</li>
+      <li>Board Member, Southern Delta Energy Bar & Business</li>
+    </ul>
+
+    <h2 class="mb-2 font-semibold text-2xl">Affiliations</h2>
+    <ul class="mb-6 pl-6 text-gray-500 list-disc">
+      <li>American Bar Association</li>
+      <li>Louisiana State Bar Association</li>
+      <li>Federal Energy Bar Association Board of Directors, 2015–2017</li>
+    </ul>
+
+    <h2 class="mb-2 font-semibold text-2xl">Bar Admission</h2>
+    <ul class="mb-6 pl-6 text-gray-500 list-disc">
+      <li>Louisiana</li>
+    </ul>
+
+    <h2 class="mb-2 font-semibold text-2xl">Court Admission</h2>
+    <ul class="mb-6 pl-6 text-gray-500 list-disc">
+      <li>Fifth Circuit Court, 2011</li>
+      <li>Northern District of Louisiana, 2012</li>
+      <li>California State Court, 2013</li>
+      <li>U.S. District Court for the District of Columbia, 2019</li>
+      <li>U.S. Court of Appeals for the Ninth Circuit</li>
+    </ul>
+  </div>
+</section>
+
     <!-- CTA Section -->
     <section class="bg-[#007a4d] py-20 text-white text-center">
     <div class="mx-auto px-5 max-w-[800px]">
@@ -221,7 +268,6 @@
         </button>
     </div>
     </section>
-    
     </main>
 
     <!-- Footer Section -->

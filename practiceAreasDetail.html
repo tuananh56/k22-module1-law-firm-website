@@ -41,7 +41,7 @@
     </style>
   </head>
 
-  <body class="bg-[#fff0c9] text-[#111]">
+  <body class="text-[#111]">
     <!-- TOP BORDER -->
     <div class="bg-[#0875a5] w-full h-[3px]"></div>
 
@@ -69,7 +69,7 @@
     </button>
 
         <nav class="hidden md:flex items-center gap-8 text-[13px]">
-          <a href="index.html" class="hover:text-[#ff5a3c] transition-colors">
+          <a href="index.html" class="font-medium text-[#ff5a3c]">
             Home
             <i class="ml-1 text-[10px] fa-solid fa-angle-down"></i>
           </a>
@@ -82,7 +82,7 @@
            <!-- Practice Areas Dropdown -->
       <div class="relative flex items-center gap-1">
   <!-- Link Practice Areas -->
-  <a href="practiceAreas.html" class="font-medium text-[#ff5a3c]">
+  <a href="practiceAreas.html" class="font-medium text-[#ff5a3c]>
     Practice Areas
   </a>
 
@@ -147,65 +147,104 @@
 
       </div>
     </header>
+<script>
+  const arrowBtn = document.getElementById("arrowBtn");
+  const practiceMenu = document.getElementById("practiceMenu");
+  const arrowIcon = document.getElementById("arrowIcon");
 
+  const pageArrowBtn = document.getElementById("pageArrowBtn");
+  const pageMenu = document.getElementById("pageMenu");
+  const pageArrowIcon = document.getElementById("pageArrowIcon");
+
+  arrowBtn.addEventListener("click", function () {
+    practiceMenu.classList.toggle("hidden");
+    arrowIcon.classList.toggle("rotate-180"); // xoay mũi tên
+  });
+
+  pageArrowBtn.addEventListener("click", function () {
+    pageMenu.classList.toggle("hidden");
+    pageArrowIcon.classList.toggle("rotate-180"); // xoay mũi tên
+  });
+</script>
     <!-- HERO -->
     <main>
+        <section class="flex flex-col items-center mx-auto px-5 pt-16 pb-28 w-full md:max-w-[900px] text-center">
+  <!-- Ảnh ở trên -->
+  <img src="asset/imgs/practiceAreasDetail/1.jpg" 
+       alt="Hình minh họa" 
+       class="shadow-lg mb-8 rounded-lg w-full max-w-[750px]" />
 
-      <section class="bg-[#fff0c9] py-16 text-center">
-  <!-- Heading -->
-  <div class="mb-2 text-gray-700 text-sm uppercase tracking-wide">#Practice Areas</div>
-  <h2 class="mb-4 font-extrabold text-gray-900 text-5xl">
-    Our Practice Areas to Serve You
-  </h2>
-  <p class="mx-auto max-w-2xl text-gray-700">
-    Where every injury is personal. We are a different kind of law firm. Let our small, passionate group of trial lawyers fight for your rights!
-  </p>
-      </section>
+  <!-- Văn bản ở dưới -->
+  <div class="text-left">
+    <h2 class="flex justify-between mt-6 mb-6 font-bold text-black text-3xl">Tulsa Car Accident Attorney</h2> 
+    <p class="text-gray-500 leading-relaxed">
+      If you or a loved one have been in an auto accident, you may be feeling overwhelmed and frustrated. 
+      The aftermath of a car accident can affect your personal and professional life as you deal with the physical, emotional, and financial burdens that an accident can cause. 
+      If you are struggling with the legalities of a car accident, then you want an experienced and knowledgeable car accident attorney by your side.
+      <br><br>
+      At The Rode Law Firm, a personal injury firm with locations in Tulsa and Sapulpa, Oklahoma, we are focused on client recovery from auto accidents and severe injuries. 
+      We represent people in the Tulsa, Sapulpa, Broken Arrow, Sand Springs, and Owasso, Oklahoma areas who have suffered injuries in car accidents by providing professional representation both in and out of the courtroom.
+      <br><br>
+      If you are involved in a car accident, the steps you take afterward directly affect your recovery. 
+      Having the nearest law enforcement agency investigate the wreck and a visit to the ER are prudent and highly recommended. 
+      Many injuries, such as a herniated disc or a concussion, may be disguised until weeks or months after the accident. 
+      Your well-being should be your number one priority.
+    </p>
+    <h2 class="flex justify-between mt-6 mb-6 font-bold text-black text-3xl">Causes of Automobiles Accidesnts</h2>
+     <p class="text-gray-500 leading-relaxed">
+      Sometimes the cause of an accident is a driver’s actions or in-actions and may not be obvious to the police and eyewitnesses, such as:
+    </p>
+    <ul class="pl-6 text-black list-disc">
+        <li>Distracted driving</li>
+        <li></li>
+        <li>Driving aggressively</li>
+        <li></li>
+        <li>Drunk driving</li>
+        <li></li>
+        <li>Fatigued driving</li>
+        <li></li>
+        <li>Speaking or texting with a cell phone</li>
+        <li></li>
+    </ul>
+     <p class="text-gray-500 leading-relaxed">
+      At The Rode Law Firm, we will work with you to get you the best outcome possible for your case. We understand how devastating an accident can be, and how the effects of such can be life-altering. Our passion for helping people get back on their feet makes us an excellent legal partner for you. We care about you and want to help you resolve your case fairly and quickly. With over 30 years of legal experience, we have the skills needed to effectively defend you as your car accidents attorney. You deserve to be compensated fairly for your pain and suffering.
+    </p>
+    <h2 class="flex justify-between mt-6 mb-6 font-bold text-black text-3xl">How We Will handle Your Case?</h2> 
+    <p class="text-gray-500 leading-relaxed">
+      When we meet with new clients, our priority is to establish a strong attorney-client relationship. This will help us collaborate with you throughout the entire legal process, and make you feel comfortable coming to us with any questions or concerns along the way. Communication is imperative and constant throughout your case. We'll speak at least once every three weeks so that both parties are never in the dark. As our client, you will receive a full list of do's and don'ts while we handle your legal situation. This will guide you on best practices so that we can get you the outcome you deserve.
 
-      <section class="bg-white py-16 text-center">
-  <h2 class="mb-4 font-extrabold text-gray-900 text-4xl">Our Practice Areas</h2>
-  <p class="mx-auto mb-12 max-w-xl text-gray-600">
-    Our Law Office provides a professional experience for all our clients, helping them navigate their legal rights.
-  </p>
-
-  <div class="gap-8 grid grid-cols-1 md:grid-cols-3 px-10">
-    <!-- Personal Injury Law -->
-    <div class="bg-white shadow-lg mx-auto rounded-lg w-[370px] overflow-hidden">
-      <img src="asset/imgs/practiceAreas/1.jpg" alt="Personal Injury Law" class="w-full h-[370px] object-cover">
-      <div class="bg-orange-500 py-3 font-semibold text-white">Personal Injury Law</div>
-    </div>
-
-    <!-- Employment Law -->
-    <div class="bg-white shadow-lg mx-auto rounded-lg w-[370px] overflow-hidden">
-      <img src="asset/imgs/practiceAreas/2.jpg" alt="Employment Law" class="w-full h-[370px] object-cover">
-      <div class="bg-gray-100 py-3 font-semibold text-gray-900">Employment Law</div>
-    </div>
-
-    <!-- Immigration Law -->
-    <div class="bg-white shadow-lg mx-auto rounded-lg w-[370px] overflow-hidden">
-      <img src="asset/imgs/practiceAreas/3.jpg" alt="Immigration Law" class="w-full h-[370px] object-cover">
-      <div class="bg-gray-100 py-3 font-semibold text-gray-900">Immigration Law</div>
-    </div>
-
-    <!-- Family Law -->
-    <div class="bg-white shadow-lg mx-auto rounded-lg w-[370px] overflow-hidden">
-      <img src="asset/imgs/practiceAreas/4.jpg" alt="Family Law" class="w-full h-[370px] object-cover">
-      <div class="bg-gray-100 py-3 font-semibold text-gray-900">Family Law</div>
-    </div>
-
-    <!-- Divorce Law -->
-    <div class="bg-white shadow-lg mx-auto rounded-lg w-[370px] overflow-hidden">
-      <img src="asset/imgs/practiceAreas/5.jpg" alt="Divorce Law" class="w-full h-[370px] object-cover">
-      <div class="bg-gray-100 py-3 font-semibold text-gray-900">Divorce Law</div>
-    </div>
-
-    <!-- Property Law -->
-    <div class="bg-white shadow-lg mx-auto rounded-lg w-[370px] overflow-hidden">
-      <img src="asset/imgs/practiceAreas/6.jpg" alt="Property Law" class="w-full h-[370px] object-cover">
-      <div class="bg-gray-100 py-3 font-semibold text-gray-900">Property Law</div>
-    </div>
+The legal process can be confusing, so you may be wondering: how long will the process take? The answer to this question is dependent upon your recovery time for any injuries you may have sustained, how your insurance company responds to your claim, and whether or not we need to go to trial. No matter what, your attorneys at The Rode Law Firm will be by your side to answer any questions or concerns as best we can.
+    </p>
+    <h2 class="flex justify-between mt-6 mb-6 font-bold text-black text-3xl">Compansation</h2> 
+    <p class="text-gray-500 leading-relaxed">
+     If you have suffered harm and losses in a car accident, you have the right to make a claim for compensation against the responsible party. We can often recover compensation for:
+    </p>
+     <ul class="pl-6 text-black list-disc">
+        <li>Medical expenses</li>
+        <li></li>
+        <li>Out-of-pocket expenses</li>
+        <li></li>
+        <li>Property damage</li>
+        <li></li>
+        <li>Loss of earning capacity</li>
+        <li></li>
+        <li>Physical pain and suffering</li>
+        <li></li>
+        <li>Mental pain and suffering</li>
+        <li></li>
+        <li>Scarring and disfigurement</li>
+        <li></li>
+        <li>Loss of health insurance or other benefits</li>
+        <li></li>
+        <li>Loss of business and more</li>
+    </ul>
+     <h2 class="flex justify-between mt-6 mb-6 font-bold text-black text-3xl">Call Our Law Firm Today</h2> 
+    <p class="text-gray-500 leading-relaxed">
+        Our auto accidents attorneys and team will work on your case for you from start to finish. With a proven process for client recovery, we’ll manage your case to ensure the best recovery for you — both physically and financially. We are located in Tulsa and Sapulpa, Oklahoma, and we are proud to serve clients in other areas of Oklahoma including Broken Arrow, Sand Springs, and Owasso. Contact us today for legal help you can count on.
+    </p>
   </div>
-      </section>
+</section>
+
     <!-- CTA Section -->
     <section class="bg-[#007a4d] py-20 text-white text-center">
     <div class="mx-auto px-5 max-w-[800px]">
