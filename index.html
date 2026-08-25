@@ -193,7 +193,7 @@ const overlay = document.getElementById("overlay");
 menuBtn.addEventListener("click", () => {
   const isHidden = mobileMenu.classList.contains("hidden");
 
-  if (isHidden) {
+  if (isHidden) { 
     mobileMenu.classList.remove("hidden");
     setTimeout(() => mobileMenu.classList.remove("-translate-x-full"), 10);
     overlay.classList.remove("hidden");
