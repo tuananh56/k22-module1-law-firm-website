@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Justice Law Firm</title>
+    <link rel="icon" type="image/x-icon" href="asset/gavel-solid.png" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -48,7 +49,7 @@
     <!-- HEADER -->
      <header class="w-full">
       <div
-        class="flex justify-between items-center mx-auto px-5 py-6 w-full md:max-w-[1000px]"
+        class="flex justify-between items-center mx-auto px-5 py-6 w-full md:max-w-[1000px] text-lg md:text-xl"
       >
         <!-- LOGO -->
         <a href="index.html" class="hidden md:flex flex-col items-center leading-none">
@@ -65,7 +66,7 @@
         </a>
 
      <!-- Hamburger button -->
-<button id="menu-btn" class="md:hidden block text-[#ff593d] text-2xl transition-transform duration-300">
+<button id="menu-btn" class="md:hidden block text-amber-800 text-2xl transition-transform duration-300">
   <i id="menu-icon" class="fa-solid fa-bars"></i>
 </button>
 
@@ -73,7 +74,7 @@
 <div id="overlay" class="hidden z-10 fixed inset-0 bg-black/40"></div>
 
 <!-- Mobile menu trượt từ trái -->
-<div id="mobile-menu" class="hidden md:hidden top-0 left-0 z-20 fixed bg-[#ff5a3c] shadow-lg px-5 py-6 w-[70%] h-full transition-transform -translate-x-full duration-500 ease-in-out">
+<div id="mobile-menu" class="hidden md:hidden top-0 left-0 z-20 fixed bg-[#ebce75] shadow-lg px-5 py-6 w-[70%] h-full transition-transform -translate-x-full duration-500 ease-in-out">
   <a href="index.html" class="block py-2 text-white">Home</a>
   <a href="about.html" class="block py-2 text-white">About</a>
   <a href="practiceAreas.html" class="block py-2 text-white">Practice Areas</a>
@@ -246,11 +247,11 @@ overlay.addEventListener("click", () => {
 
         <!-- Right Image Section -->
         <div class="flex justify-center mt-10 md:mt-0 md:w-1/2">
-            <img src="asset/imgs/about/1.jpg">
+            <img src="asset/imgs/about/1.jpg" class="rounded-2xl w-96 h-96 object-cover">
         </div>
         </section>
                 
-        <section class="bg-black bg-white py-12 text-center">
+        <section class="bg-white py-12 text-center">
     <div class="mb-2 text-gray-400 text-sm uppercase tracking-wide">#Gallery</div>
     <h2 class="mb-4 font-extrabold text-black text-4xl">Justice Law Firm</h2>
     <p class="mx-auto mb-8 max-w-xl text-gray-400">
@@ -327,73 +328,116 @@ overlay.addEventListener("click", () => {
           <!-- Grid -->
           <div class="gap-8 grid md:grid-cols-3 mb-12">
             <!-- Card 1 -->
-            <div class="bg-[#1a1f1d] p-5 rounded-sm">
+            <div class="group group relative relative bg-[#1a1f1d] p-5 rounded-sm overflow-hidden overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=700&q=80"
+                src="asset/imgs/home/11.jpg"
                 alt="David Warner"
-                class="mb-4 rounded-sm w-full h-[260px] object-cover"
+                class="rounded-sm w-full h-[260px] object-cover group-hover:scale-105 transition-transform duration-500"
               />
-              <h3 class="font-semibold text-lg">David Warner</h3>
-              <p class="mb-4 text-gray-400 text-sm">Attorney at Law</p>
-              <a
-                href="#"
-                class="inline-block bg-[#ff593d] hover:bg-[#e94b32] px-6 py-2 rounded font-medium text-white transition"
+              <div class="absolute inset-0 flex justify-center items-center bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                <a
+                href="attorneysProfile.html"
+                class="bg-[#ff593d] hover:bg-[#e94b32] px-6 py-2 rounded font-medium text-white transition"
               >
                 View Profile
               </a>
+              </div>
+              <h3 class="font-semibold text-lg">David Warner</h3>
+              <p class="mb-4 text-gray-400 text-sm">Attorney at Law</p>
+              
             </div>
 
             <!-- Card 2 -->
-            <div class="bg-[#1a1f1d] p-5 rounded-sm">
+            <div class="group relative bg-[#1a1f1d] p-5 rounded-sm overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?auto=format&fit=crop&w=700&q=80"
+                src="asset/imgs/home/12.jpg"
                 alt="Aaron Finch"
                 class="mb-4 rounded-sm w-full h-[260px] object-cover"
               />
+                 <div class="absolute inset-0 flex justify-center items-center bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                <a
+                href="attorneysProfile.html"
+                class="bg-[#ff593d] hover:bg-[#e94b32] px-6 py-2 rounded font-medium text-white transition"
+              >
+                View Profile
+              </a>
+              </div>
               <h3 class="font-semibold text-lg">Aaron Finch</h3>
               <p class="text-gray-400 text-sm">Founding President</p>
             </div>
 
             <!-- Card 3 -->
-            <div class="bg-[#1a1f1d] p-5 rounded-sm">
+            <div class="group relative bg-[#1a1f1d] p-5 rounded-sm overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=700&q=80"
+                src="asset/imgs/home/13.jpg"
                 alt="Jamie Watts"
                 class="mb-4 rounded-sm w-full h-[260px] object-cover"
               />
+                 <div class="absolute inset-0 flex justify-center items-center bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                <a
+                href="attorneysProfile.html"
+                class="bg-[#ff593d] hover:bg-[#e94b32] px-6 py-2 rounded font-medium text-white transition"
+              >
+                View Profile
+              </a>
+              </div>
               <h3 class="font-semibold text-lg">Jamie Watts</h3>
               <p class="text-gray-400 text-sm">Partner</p>
             </div>
 
             <!-- Card 4 -->
-            <div class="bg-[#1a1f1d] p-5 rounded-sm">
+            <div class="group relative bg-[#1a1f1d] p-5 rounded-sm overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=700&q=80"
+                src="asset/imgs/home/14.jpg"
                 alt="Ellyse Perry"
                 class="mb-4 rounded-sm w-full h-[260px] object-cover"
               />
+                 <div class="absolute inset-0 flex justify-center items-center bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                <a
+                href="attorneysProfile.html"
+                class="bg-[#ff593d] hover:bg-[#e94b32] px-6 py-2 rounded font-medium text-white transition"
+              >
+                View Profile
+              </a>
+              </div>
               <h3 class="font-semibold text-lg">Ellyse Perry</h3>
               <p class="text-gray-400 text-sm">Associate Attorney</p>
             </div>
 
             <!-- Card 5 -->
-            <div class="bg-[#1a1f1d] p-5 rounded-sm">
+            <div class="group relative bg-[#1a1f1d] p-5 rounded-sm overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?auto=format&fit=crop&w=700&q=80"
+                src="asset/imgs/home/15.jpg"
                 alt="Meg Lanning"
                 class="mb-4 rounded-sm w-full h-[260px] object-cover"
               />
+                 <div class="absolute inset-0 flex justify-center items-center bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                <a
+                href="attorneysProfile.html"
+                class="bg-[#ff593d] hover:bg-[#e94b32] px-6 py-2 rounded font-medium text-white transition"
+              >
+                View Profile
+              </a>
+              </div>
               <h3 class="font-semibold text-lg">Meg Lanning</h3>
               <p class="text-gray-400 text-sm">Senior Partner</p>
             </div>
 
             <!-- Card 6 -->
-            <div class="bg-[#1a1f1d] p-5 rounded-sm">
+            <div class="group relative bg-[#1a1f1d] p-5 rounded-sm overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=700&q=80"
+                src="asset/imgs/home/16.jpg"
                 alt="Peter Siddle"
                 class="mb-4 rounded-sm w-full h-[260px] object-cover"
               />
+                 <div class="absolute inset-0 flex justify-center items-center bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                <a
+                href="attorneysProfile.html"
+                class="bg-[#ff593d] hover:bg-[#e94b32] px-6 py-2 rounded font-medium text-white transition"
+              >
+                View Profile
+              </a>
+              </div>
               <h3 class="font-semibold text-lg">Peter Siddle</h3>
               <p class="text-gray-400 text-sm">Of Counsel</p>
             </div>
@@ -407,7 +451,7 @@ overlay.addEventListener("click", () => {
             All Attorney
           </a>
         </div>
-        </section>
+      </section>
       <!-- HONORS & AWARDS SECTION -->
         <section class="bg-[#fff0c9] py-20 text-black">
         <div class="mx-auto px-5 w-full md:max-w-[1000px] text-center">

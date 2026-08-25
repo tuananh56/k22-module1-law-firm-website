@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Justice Law Firm</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" href="asset/gavel-solid.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -65,7 +66,7 @@
         </a>
 
         <!-- Hamburger button -->
-<button id="menu-btn" class="md:hidden block text-[#ff593d] text-2xl transition-transform duration-300">
+<button id="menu-btn" class="md:hidden block text-amber-800 text-2xl transition-transform duration-300">
   <i id="menu-icon" class="fa-solid fa-bars"></i>
 </button>
 
@@ -73,7 +74,7 @@
 <div id="overlay" class="hidden z-10 fixed inset-0 bg-black/40"></div>
 
 <!-- Mobile menu trượt từ trái -->
-<div id="mobile-menu" class="hidden md:hidden top-0 left-0 z-20 fixed bg-[#ff5a3c] shadow-lg px-5 py-6 w-[70%] h-full transition-transform -translate-x-full duration-500 ease-in-out">
+<div id="mobile-menu" class="hidden md:hidden top-0 left-0 z-20 fixed bg-[#ebce75] shadow-lg px-5 py-6 w-[70%] h-full transition-transform -translate-x-full duration-500 ease-in-out">
   <a href="index.html" class="block py-2 text-white">Home</a>
   <a href="about.html" class="block py-2 text-white">About</a>
   <a href="practiceAreas.html" class="block py-2 text-white">Practice Areas</a>
@@ -109,12 +110,12 @@
 
   <!-- Dropdown -->
 <div id="practiceMenu" class="hidden top-[40px] left-0 z-10 absolute bg-white shadow-lg rounded-md w-48">
-  <a href="practiceAreas/divorce.html" class="block hover:bg-[#ff5a3c] px-4 py-2 text-gray-700 hover:text-white">Divorce</a>
+  <a href="#" class="block hover:bg-[#ff5a3c] px-4 py-2 text-gray-700 hover:text-white">Divorce</a>
   <a href="practiceAreasDetail.html" class="block hover:bg-[#ff5a3c] px-4 py-2 text-gray-700 hover:text-white">Personal Injury</a>
-  <a href="practiceAreas/employment.html" class="block hover:bg-[#ff5a3c] px-4 py-2 text-gray-700 hover:text-white">Employment</a>
-  <a href="practiceAreas/immigration.html" class="block hover:bg-[#ff5a3c] px-4 py-2 text-gray-700 hover:text-white">Immigration</a>
-  <a href="practiceAreas/family.html" class="block hover:bg-[#ff5a3c] px-4 py-2 text-gray-700 hover:text-white">Family</a>
-  <a href="practiceAreas/property.html" class="block hover:bg-[#ff5a3c] px-4 py-2 text-gray-700 hover:text-white">Property</a>
+  <a href="#" class="block hover:bg-[#ff5a3c] px-4 py-2 text-gray-700 hover:text-white">Employment</a>
+  <a href="#" class="block hover:bg-[#ff5a3c] px-4 py-2 text-gray-700 hover:text-white">Immigration</a>
+  <a href="#" class="block hover:bg-[#ff5a3c] px-4 py-2 text-gray-700 hover:text-white">Family</a>
+  <a href="#" class="block hover:bg-[#ff5a3c] px-4 py-2 text-gray-700 hover:text-white">Property</a>
 </div>
 
 </div>
@@ -228,50 +229,115 @@ overlay.addEventListener("click", () => {
     Where every injury is personal. We are a different kind of law firm. Let our small, passionate group of trial lawyers fight for your rights!
   </p>
       </section>
+      <section class="bg-[#ffff] py-20 text-black">
+        <div class="mx-auto px-5 w-full md:w-full md:max-w-[1000px] text-center">
+          <!-- Heading -->
+          <p class="mb-2 font-semibold text-black">#Services</p>
+          <h2 class="mb-3 font-bold text-4xl heading-font">
+            Our Practice Areas
+          </h2>
+          <p
+            class="mx-auto mb-12 max-w-[600px] text-[15px] text-black leading-relaxed"
+          >
+            Our Law Office provides a professional experience for all our
+            clients, helping them navigate their legal rights.
+          </p>
 
-      <section class="bg-white py-16 text-center">
-  <h2 class="mb-4 font-extrabold text-gray-900 text-4xl">Our Practice Areas</h2>
-  <p class="mx-auto mb-12 max-w-xl text-gray-600">
-    Our Law Office provides a professional experience for all our clients, helping them navigate their legal rights.
-  </p>
+          <!-- Grid -->
+          <div class="gap-6 grid md:grid-cols-3 mb-12">
+            <!-- Card 1 -->
+            <div class="group relative rounded-sm overflow-hidden">
+              <img
+                src="asset/imgs/home/3.jpg"
+                alt="Personal Injury Law"
+                class="w-full h-[260px] object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div
+                class="bottom-0 left-0 absolute bg-white group-hover:bg-[#ff593d] py-3 w-full font-semibold text-black group-hover:text-white text-center transition-colors duration-500"
+              >
+                Personal Injury Law
+              </div>
+            </div>
 
-  <div class="gap-8 grid grid-cols-1 md:grid-cols-3 px-10">
-    <!-- Personal Injury Law -->
-    <div class="bg-white shadow-lg mx-auto rounded-lg w-[370px] overflow-hidden">
-      <img src="asset/imgs/practiceAreas/1.jpg" alt="Personal Injury Law" class="w-full h-[370px] object-cover">
-      <div class="bg-orange-500 py-3 font-semibold text-white">Personal Injury Law</div>
-    </div>
+            <!-- Card 2 -->
+            <div class="group relative rounded-sm overflow-hidden">
+              <img
+                src="asset/imgs/home/4.jpg"
+                alt="Employment Law"
+                class="w-full h-[260px] object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div
+                class="bottom-0 left-0 absolute bg-white group-hover:bg-[#ff593d] py-3 w-full font-semibold text-black group-hover:text-white text-center transition-colors duration-500"
+              >
+                Employment Law
+              </div>
+            </div>
 
-    <!-- Employment Law -->
-    <div class="bg-white shadow-lg mx-auto rounded-lg w-[370px] overflow-hidden">
-      <img src="asset/imgs/practiceAreas/2.jpg" alt="Employment Law" class="w-full h-[370px] object-cover">
-      <div class="bg-gray-100 py-3 font-semibold text-gray-900">Employment Law</div>
-    </div>
+            <!-- Card 3 -->
+            <div class="group relative rounded-sm overflow-hidden">
+              <img
+                src="asset/imgs/home/5.jpg"
+                alt="Immigration Law"
+                class="w-full h-[260px] object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div
+                class="bottom-0 left-0 absolute bg-white group-hover:bg-[#ff593d] py-3 w-full font-semibold text-black group-hover:text-white text-center transition-colors duration-500"
+              >
+                Immigration Law
+              </div>
+            </div>
 
-    <!-- Immigration Law -->
-    <div class="bg-white shadow-lg mx-auto rounded-lg w-[370px] overflow-hidden">
-      <img src="asset/imgs/practiceAreas/3.jpg" alt="Immigration Law" class="w-full h-[370px] object-cover">
-      <div class="bg-gray-100 py-3 font-semibold text-gray-900">Immigration Law</div>
-    </div>
+            <!-- Card 4 -->
+            <div class="group relative rounded-sm overflow-hidden">
+              <img
+                src="asset/imgs/home/6.jpg"
+                alt="Family Law"
+                class="w-full h-[260px] object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div
+                class="bottom-0 left-0 absolute bg-white group-hover:bg-[#ff593d] py-3 w-full font-semibold text-black group-hover:text-white text-center transition-colors duration-500"
+              >
+                Family Law
+              </div>
+            </div>
 
-    <!-- Family Law -->
-    <div class="bg-white shadow-lg mx-auto rounded-lg w-[370px] overflow-hidden">
-      <img src="asset/imgs/practiceAreas/4.jpg" alt="Family Law" class="w-full h-[370px] object-cover">
-      <div class="bg-gray-100 py-3 font-semibold text-gray-900">Family Law</div>
-    </div>
+            <!-- Card 5 -->
+            <div class="group relative rounded-sm overflow-hidden">
+              <img
+                src="asset/imgs/home/7.jpg"
+                alt="Divorce Law"
+                class="w-full h-[260px] object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div
+                class="bottom-0 left-0 absolute bg-white group-hover:bg-[#ff593d] py-3 w-full font-semibold text-black group-hover:text-white text-center transition-colors duration-500"
+              >
+                Divorce Law
+              </div>
+            </div>
 
-    <!-- Divorce Law -->
-    <div class="bg-white shadow-lg mx-auto rounded-lg w-[370px] overflow-hidden">
-      <img src="asset/imgs/practiceAreas/5.jpg" alt="Divorce Law" class="w-full h-[370px] object-cover">
-      <div class="bg-gray-100 py-3 font-semibold text-gray-900">Divorce Law</div>
-    </div>
+            <!-- Card 6 -->
+            <div class="group relative rounded-sm overflow-hidden">
+              <img
+                src="asset/imgs/home/8.jpg"
+                alt="Property Law"
+                class="w-full h-[260px] object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div
+                class="bottom-0 left-0 absolute bg-white group-hover:bg-[#ff593d] py-3 w-full font-semibold text-black group-hover:text-white text-center transition-colors duration-500"
+              >
+                Property Law
+              </div>
+            </div>
+          </div>
 
-    <!-- Property Law -->
-    <div class="bg-white shadow-lg mx-auto rounded-lg w-[370px] overflow-hidden">
-      <img src="asset/imgs/practiceAreas/6.jpg" alt="Property Law" class="w-full h-[370px] object-cover">
-      <div class="bg-gray-100 py-3 font-semibold text-gray-900">Property Law</div>
-    </div>
-  </div>
+          <!-- Button -->
+          <a
+            href="#"
+            class="inline-block bg-[#ff593d] hover:bg-[#e94b32] px-8 py-3 rounded font-medium text-white transition"
+          >
+            View All
+          </a>
+        </div>
       </section>
     <!-- CTA Section -->
     <section class="bg-[#007a4d] py-20 text-white text-center">
