@@ -148,6 +148,25 @@
       </div>
     </header>
 
+    <script>
+  const arrowBtn = document.getElementById("arrowBtn");
+  const practiceMenu = document.getElementById("practiceMenu");
+  const arrowIcon = document.getElementById("arrowIcon");
+
+  const pageArrowBtn = document.getElementById("pageArrowBtn");
+  const pageMenu = document.getElementById("pageMenu");
+  const pageArrowIcon = document.getElementById("pageArrowIcon");
+
+  arrowBtn.addEventListener("click", function () {
+    practiceMenu.classList.toggle("hidden");
+    arrowIcon.classList.toggle("rotate-180"); // xoay mũi tên
+  });
+
+  pageArrowBtn.addEventListener("click", function () {
+    pageMenu.classList.toggle("hidden");
+    pageArrowIcon.classList.toggle("rotate-180"); // xoay mũi tên
+  });
+</script>
     <!-- HERO -->
     <main>
 
