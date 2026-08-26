@@ -77,11 +77,42 @@
 <div id="mobile-menu" class="hidden md:hidden top-0 left-0 z-20 fixed bg-[#ebce75] shadow-lg px-5 py-6 w-[70%] h-full transition-transform -translate-x-full duration-500 ease-in-out">
   <a href="index.html" class="block py-2 text-white">Home</a>
   <a href="about.html" class="block py-2 text-white">About</a>
-  <a href="practiceAreas.html" class="block py-2 text-white">Practice Areas</a>
+
+  <!-- Practice Areas Dropdown -->
+  <div class="relative">
+    <button id="mobilePracticeBtn" class="flex justify-between items-center py-2 w-full text-white">
+      <span>Practice Areas</span>
+      <i id="mobilePracticeIcon" class="transition-transform duration-300 fa-solid fa-angle-down"></i>
+    </button>
+   <div id="mobilePracticeMenu" class="hidden bg-[#d4b85f] mt-2 rounded-md">
+      <a href="error.html" class="block hover:bg-[#ff5a3c] px-4 py-2 text-white">Divorce</a>
+      <a href="practiceAreasDetail.html" class="block hover:bg-[#ff5a3c] px-4 py-2 text-white">Personal Injury</a>
+      <a href="error.html" class="block hover:bg-[#ff5a3c] px-4 py-2 text-white">Employment</a>
+      <a href="error.html" class="block hover:bg-[#ff5a3c] px-4 py-2 text-white">Immigration</a>
+      <a href="error.html" class="block hover:bg-[#ff5a3c] px-4 py-2 text-white">Family</a>
+      <a href="error.html" class="block hover:bg-[#ff5a3c] px-4 py-2 text-white">Property</a>
+    </div>
+  </div>
+
+  <!-- Page Dropdown -->
+  <div class="relative mt-2">
+    <button id="mobilePageBtn" class="flex justify-between items-center py-2 w-full text-white">
+      <span>Page</span>
+      <i id="mobilePageIcon" class="transition-transform duration-300 fa-solid fa-angle-down"></i>
+    </button>
+    <div id="mobilePageMenu" class="hidden bg-[#d4b85f] mt-2 rounded-md">
+      <a href="blog.html" class="block hover:bg-[#ff5a3c] px-4 py-2 text-white">Blog</a>
+      <a href="contact.html" class="block hover:bg-[#ff5a3c] px-4 py-2 text-white">Contact</a>
+      <a href="faq.html" class="block hover:bg-[#ff5a3c] px-4 py-2 text-white">FAQ</a>
+      <a href="error.html" class="block hover:bg-[#ff5a3c] px-4 py-2 text-white">404</a>
+      <a href="coming.html" class="block hover:bg-[#ff5a3c] px-4 py-2 text-white">Coming Soon</a>
+    </div>
+  </div>
+
   <a href="attorneys.html" class="block py-2 text-white">Attorneys</a>
-  <a href="page.html" class="block py-2 text-white">Page</a>
   <p class="mt-4 text-white text-sm">Call: <span class="font-semibold">(000) 123 456 789</span></p>
 </div>
+
 
 
 
@@ -429,4 +460,5 @@ overlay.addEventListener("click", () => {
     </div>
     </footer>
   </body>
+</html>
 </html>
