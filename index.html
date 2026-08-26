@@ -88,7 +88,9 @@
           id="mobilePracticeBtn"
           class="flex justify-between items-center py-2 w-full text-white"
         >
-          <span>Practice Areas</span>
+         <a href="practiceAreas.html" class="flex-1 text-left">
+            <span>Practice Areas</span>
+          </a>
           <i
             id="mobilePracticeIcon"
             class="transition-transform duration-300 fa-solid fa-angle-down"
@@ -137,10 +139,12 @@
           id="mobilePageBtn"
           class="flex justify-between items-center py-2 w-full text-white"
         >
-          <span>Page</span>
+           <a href="page.html" class="flex-1 text-left">
+            <span>Page</span>
+          </a>
           <i
             id="mobilePageIcon"
-            class="transition-transform duration-300 fa-solid fa-angle-down"
+            class="transition-transform duration-300 cursor-pointer fa-solid fa-angle-down"
           ></i>
         </button>
         <div id="mobilePageMenu" class="hidden bg-[#d4b85f] mt-2 rounded-md">
@@ -202,7 +206,7 @@
         <button id="arrowBtn" class="transition-colors">
           <i
             id="arrowIcon"
-            class="text-[10px] transition-transform duration-300 fa-solid fa-angle-up"
+            class="text-[10px] transition-transform duration-300 cursor-pointer fa-solid fa-angle-up"
           ></i>
         </button>
 
@@ -258,7 +262,7 @@
         <button id="pageArrowBtn" class="transition-colors">
           <i
             id="pageArrowIcon"
-            class="text-[10px] transition-transform duration-300 fa-solid fa-angle-up"
+            class="text-[10px] transition-transform duration-300 cursor-pointer fa-solid fa-angle-up"
           ></i>
         </button>
 
@@ -330,7 +334,7 @@
   const mobilePracticeMenu = document.getElementById("mobilePracticeMenu");
   const mobilePracticeIcon = document.getElementById("mobilePracticeIcon");
 
-  mobilePracticeBtn.addEventListener("click", () => {
+  mobilePracticeIcon.addEventListener("click", () => {
     mobilePracticeMenu.classList.toggle("hidden");
     mobilePracticeIcon.classList.toggle("rotate-180");
   });
@@ -340,7 +344,7 @@
   const mobilePageMenu = document.getElementById("mobilePageMenu");
   const mobilePageIcon = document.getElementById("mobilePageIcon");
 
-  mobilePageBtn.addEventListener("click", () => {
+  mobilePageIcon.addEventListener("click", () => {
     mobilePageMenu.classList.toggle("hidden");
     mobilePageIcon.classList.toggle("rotate-180");
   });
@@ -494,6 +498,7 @@
   >
     <svg
       viewBox="0 0 150 100"
+      width="100"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       class="w-full h-full"
@@ -1355,7 +1360,6 @@
     </div>
   </div>
 </footer>
-
   </body>
 </html>
 </html>
