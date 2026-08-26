@@ -209,6 +209,25 @@
   const pageMenu = document.getElementById("pageMenu");
   const pageArrowIcon = document.getElementById("pageArrowIcon");
 
+  // Mobile dropdown Practice Areas
+  const mobilePracticeBtn = document.getElementById("mobilePracticeBtn");
+  const mobilePracticeMenu = document.getElementById("mobilePracticeMenu");
+  const mobilePracticeIcon = document.getElementById("mobilePracticeIcon");
+
+    mobilePracticeIcon.addEventListener("click", () => {
+    mobilePracticeMenu.classList.toggle("hidden");
+    mobilePracticeIcon.classList.toggle("rotate-180");
+  });
+
+  // Mobile dropdown Page
+  const mobilePageBtn = document.getElementById("mobilePageBtn");
+  const mobilePageMenu = document.getElementById("mobilePageMenu");
+  const mobilePageIcon = document.getElementById("mobilePageIcon");
+
+   mobilePageIcon.addEventListener("click", () => {
+    mobilePageMenu.classList.toggle("hidden");
+    mobilePageIcon.classList.toggle("rotate-180");
+  });
   // Dropdown Practice Areas
   arrowBtn.addEventListener("click", function () {
     practiceMenu.classList.toggle("hidden");
@@ -221,34 +240,34 @@
     pageArrowIcon.classList.toggle("rotate-180"); // xoay mũi tên
   });
 
-const menuBtn = document.getElementById("menu-btn");
-const menuIcon = document.getElementById("menu-icon");
-const mobileMenu = document.getElementById("mobile-menu");
-const overlay = document.getElementById("overlay");
+  const menuBtn = document.getElementById("menu-btn");
+  const menuIcon = document.getElementById("menu-icon");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const overlay = document.getElementById("overlay");
 
-menuBtn.addEventListener("click", () => {
-  const isHidden = mobileMenu.classList.contains("hidden");
+  menuBtn.addEventListener("click", () => {
+    const isHidden = mobileMenu.classList.contains("hidden");
 
-  if (isHidden) {
-    mobileMenu.classList.remove("hidden");
-    setTimeout(() => mobileMenu.classList.remove("-translate-x-full"), 10);
-    overlay.classList.remove("hidden");
-    menuIcon.classList.replace("fa-bars", "fa-xmark");
-  } else {
+    if (isHidden) {
+      mobileMenu.classList.remove("hidden");
+      setTimeout(() => mobileMenu.classList.remove("-translate-x-full"), 10);
+      overlay.classList.remove("hidden");
+      menuIcon.classList.replace("fa-bars", "fa-xmark");
+    } else {
+      mobileMenu.classList.add("-translate-x-full");
+      overlay.classList.add("hidden");
+      menuIcon.classList.replace("fa-xmark", "fa-bars");
+      setTimeout(() => mobileMenu.classList.add("hidden"), 500);
+    }
+  });
+
+  // Đóng menu khi bấm overlay
+  overlay.addEventListener("click", () => {
     mobileMenu.classList.add("-translate-x-full");
     overlay.classList.add("hidden");
     menuIcon.classList.replace("fa-xmark", "fa-bars");
     setTimeout(() => mobileMenu.classList.add("hidden"), 500);
-  }
-});
-
-// Đóng menu khi bấm overlay
-overlay.addEventListener("click", () => {
-  mobileMenu.classList.add("-translate-x-full");
-  overlay.classList.add("hidden");
-  menuIcon.classList.replace("fa-xmark", "fa-bars");
-  setTimeout(() => mobileMenu.classList.add("hidden"), 500);
-});
+  });
 </script>
 
     <!-- HERO -->
