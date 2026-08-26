@@ -43,154 +43,279 @@
   </head>
 
   <body class="bg-[#fff0c9] text-[#111]">
-    <!-- TOP BORDER -->
-    <div class="w-full h-[3px]"></div>
-
     <!-- HEADER -->
-        <header class="w-full">
-      <div
-        class="flex justify-between items-center mx-auto px-5 py-6 w-full md:max-w-[1000px] text-lg md:text-xl"
-      >
-        <!-- LOGO -->
-        <a href="index.html" class="hidden md:flex flex-col items-center leading-none">
-          <div class="relative">
-            <!-- Gavel -->
-            <i class="fa-solid fa-gavel"></i>
-          </div>
+<header class="w-full">
+  <div
+    class="flex justify-between items-center mx-auto px-5 py-6 w-full md:max-w-[1000px] text-lg md:text-xl"
+  >
+    <!-- LOGO -->
+    <a
+      href="index.html"
+      class="hidden md:flex flex-col items-center leading-none"
+    >
+      <div class="relative">
+        <!-- Gavel -->
+        <i class="fa-solid fa-gavel"></i>
+      </div>
 
-          <span class="mt-1 font-bold text-[20px] tracking-[-1px]">
-            Justice
-          </span>
+      <span class="mt-1 font-bold text-[20px] tracking-[-1px]"> Justice </span>
 
-          <span class="text-[11px]"> Law Firm </span>
+      <span class="text-[11px]"> Law Firm </span>
+    </a>
+
+    <!-- Hamburger button -->
+    <button
+      id="menu-btn"
+      class="md:hidden block text-amber-800 text-2xl transition-transform duration-300"
+    >
+      <i id="menu-icon" class="fa-solid fa-bars"></i>
+    </button>
+
+    <!-- Overlay nền mờ -->
+    <div id="overlay" class="hidden z-10 fixed inset-0 bg-black/40"></div>
+
+    <!-- Mobile menu trượt từ trái -->
+    <div
+      id="mobile-menu"
+      class="hidden md:hidden top-0 left-0 z-20 fixed bg-[#ebce75] shadow-lg px-5 py-6 w-[70%] h-full transition-transform -translate-x-full duration-500 ease-in-out"
+    >
+      <a href="index.html" class="block py-2 text-white">Home</a>
+      <a href="about.html" class="block py-2 text-white">About</a>
+
+      <!-- Practice Areas Dropdown -->
+      <div class="relative">
+        <button
+          id="mobilePracticeBtn"
+          class="flex justify-between items-center py-2 w-full text-white"
+        >
+          <span>Practice Areas</span>
+          <i
+            id="mobilePracticeIcon"
+            class="transition-transform duration-300 fa-solid fa-angle-down"
+          ></i>
+        </button>
+        <div
+          id="mobilePracticeMenu"
+          class="hidden bg-[#d4b85f] mt-2 rounded-md"
+        >
+          <a
+            href="error.html"
+            class="block hover:bg-[#ff5a3c] px-4 py-2 text-white"
+            >Divorce</a
+          >
+          <a
+            href="practiceAreasDetail.html"
+            class="block hover:bg-[#ff5a3c] px-4 py-2 text-white"
+            >Personal Injury</a
+          >
+          <a
+            href="error.html"
+            class="block hover:bg-[#ff5a3c] px-4 py-2 text-white"
+            >Employment</a
+          >
+          <a
+            href="error.html"
+            class="block hover:bg-[#ff5a3c] px-4 py-2 text-white"
+            >Immigration</a
+          >
+          <a
+            href="error.html"
+            class="block hover:bg-[#ff5a3c] px-4 py-2 text-white"
+            >Family</a
+          >
+          <a
+            href="error.html"
+            class="block hover:bg-[#ff5a3c] px-4 py-2 text-white"
+            >Property</a
+          >
+        </div>
+      </div>
+
+      <!-- Page Dropdown -->
+      <div class="relative mt-2">
+        <button
+          id="mobilePageBtn"
+          class="flex justify-between items-center py-2 w-full text-white"
+        >
+          <span>Page</span>
+          <i
+            id="mobilePageIcon"
+            class="transition-transform duration-300 fa-solid fa-angle-down"
+          ></i>
+        </button>
+        <div id="mobilePageMenu" class="hidden bg-[#d4b85f] mt-2 rounded-md">
+          <a
+            href="blog.html"
+            class="block hover:bg-[#ff5a3c] px-4 py-2 text-white"
+            >Blog</a
+          >
+          <a
+            href="contact.html"
+            class="block hover:bg-[#ff5a3c] px-4 py-2 text-white"
+            >Contact</a
+          >
+          <a
+            href="faq.html"
+            class="block hover:bg-[#ff5a3c] px-4 py-2 text-white"
+            >FAQ</a
+          >
+          <a
+            href="error.html"
+            class="block hover:bg-[#ff5a3c] px-4 py-2 text-white"
+            >404</a
+          >
+          <a
+            href="coming.html"
+            class="block hover:bg-[#ff5a3c] px-4 py-2 text-white"
+            >Coming Soon</a
+          >
+        </div>
+      </div>
+
+      <a href="attorneys.html" class="block py-2 text-white">Attorneys</a>
+      <p class="mt-4 text-white text-sm">
+        Call: <span class="font-semibold">(000) 123 456 789</span>
+      </p>
+    </div>
+    <nav class="hidden md:flex items-center gap-8 text-[13px]">
+      <a href="index.html" class="font-medium text-[#ff5a3c]">
+        Home
+        <i class="ml-1 text-[10px] fa-solid fa-angle-down"></i>
+      </a>
+
+      <a href="about.html" class="hover:text-[#ff5a3c] transition-colors">
+        About
+        <i class="ml-1 text-[10px] fa-solid fa-angle-down"></i>
+      </a>
+
+      <!-- Practice Areas Dropdown -->
+      <div class="relative flex items-center gap-1">
+        <!-- Link Practice Areas -->
+        <a
+          href="practiceAreas.html"
+          class="hover:text-[#ff5a3c] transition-colors"
+        >
+          Practice Areas
         </a>
 
-       <!-- Hamburger button -->
-<button id="menu-btn" class="md:hidden block text-amber-800 text-2xl transition-transform duration-300">
-  <i id="menu-icon" class="fa-solid fa-bars"></i>
-</button>
+        <!-- Nút mũi tên -->
+        <button id="arrowBtn" class="transition-colors">
+          <i
+            id="arrowIcon"
+            class="text-[10px] transition-transform duration-300 fa-solid fa-angle-up"
+          ></i>
+        </button>
 
-<!-- Overlay nền mờ -->
-<div id="overlay" class="hidden z-10 fixed inset-0 bg-black/40"></div>
-
-<!-- Mobile menu trượt từ trái -->
-<div id="mobile-menu" class="hidden md:hidden top-0 left-0 z-20 fixed bg-[#ebce75] shadow-lg px-5 py-6 w-[70%] h-full transition-transform -translate-x-full duration-500 ease-in-out">
-  <a href="index.html" class="block py-2 text-white">Home</a>
-  <a href="about.html" class="block py-2 text-white">About</a>
-
-  <!-- Practice Areas Dropdown -->
-  <div class="relative">
-    <button id="mobilePracticeBtn" class="flex justify-between items-center py-2 w-full text-white">
-      <span>Practice Areas</span>
-      <i id="mobilePracticeIcon" class="transition-transform duration-300 fa-solid fa-angle-down"></i>
-    </button>
-   <div id="mobilePracticeMenu" class="hidden bg-[#d4b85f] mt-2 rounded-md">
-      <a href="error.html" class="block hover:bg-[#ff5a3c] px-4 py-2 text-white">Divorce</a>
-      <a href="practiceAreasDetail.html" class="block hover:bg-[#ff5a3c] px-4 py-2 text-white">Personal Injury</a>
-      <a href="error.html" class="block hover:bg-[#ff5a3c] px-4 py-2 text-white">Employment</a>
-      <a href="error.html" class="block hover:bg-[#ff5a3c] px-4 py-2 text-white">Immigration</a>
-      <a href="error.html" class="block hover:bg-[#ff5a3c] px-4 py-2 text-white">Family</a>
-      <a href="error.html" class="block hover:bg-[#ff5a3c] px-4 py-2 text-white">Property</a>
-    </div>
-  </div>
-
-  <!-- Page Dropdown -->
-  <div class="relative mt-2">
-    <button id="mobilePageBtn" class="flex justify-between items-center py-2 w-full text-white">
-      <span>Page</span>
-      <i id="mobilePageIcon" class="transition-transform duration-300 fa-solid fa-angle-down"></i>
-    </button>
-    <div id="mobilePageMenu" class="hidden bg-[#d4b85f] mt-2 rounded-md">
-      <a href="blog.html" class="block hover:bg-[#ff5a3c] px-4 py-2 text-white">Blog</a>
-      <a href="contact.html" class="block hover:bg-[#ff5a3c] px-4 py-2 text-white">Contact</a>
-      <a href="faq.html" class="block hover:bg-[#ff5a3c] px-4 py-2 text-white">FAQ</a>
-      <a href="error.html" class="block hover:bg-[#ff5a3c] px-4 py-2 text-white">404</a>
-      <a href="coming.html" class="block hover:bg-[#ff5a3c] px-4 py-2 text-white">Coming Soon</a>
-    </div>
-  </div>
-
-  <a href="attorneys.html" class="block py-2 text-white">Attorneys</a>
-  <p class="mt-4 text-white text-sm">Call: <span class="font-semibold">(000) 123 456 789</span></p>
-</div>
-        <nav class="hidden md:flex items-center gap-8 text-[13px]">
-          <a href="index.html" class="font-medium text-[#ff5a3c]">
-            Home
-            <i class="ml-1 text-[10px] fa-solid fa-angle-down"></i>
-          </a>
-
-          <a href="about.html" class="hover:text-[#ff5a3c] transition-colors">
-            About
-            <i class="ml-1 text-[10px] fa-solid fa-angle-down"></i>
-          </a>
-
-           <!-- Practice Areas Dropdown -->
-      <div class="relative flex items-center gap-1">
-  <!-- Link Practice Areas -->
-  <a href="practiceAreas.html" class="hover:text-[#ff5a3c] transition-colors">
-    Practice Areas
-  </a>
-
-  <!-- Nút mũi tên -->
-  <button id="arrowBtn" class="transition-colors">
-    <i id="arrowIcon" class="text-[10px] transition-transform duration-300 fa-solid fa-angle-up"></i>
-  </button>
-
-  <!-- Dropdown -->
-<div id="practiceMenu" class="hidden top-[40px] left-0 z-10 absolute bg-white shadow-lg rounded-md w-48">
-  <a href="practiceAreas/divorce.html" class="block hover:bg-[#ff5a3c] px-4 py-2 text-gray-700 hover:text-white">Divorce</a>
-  <a href="practiceAreasDetail.html" class="block hover:bg-[#ff5a3c] px-4 py-2 text-gray-700 hover:text-white">Personal Injury</a>
-  <a href="practiceAreas/employment.html" class="block hover:bg-[#ff5a3c] px-4 py-2 text-gray-700 hover:text-white">Employment</a>
-  <a href="practiceAreas/immigration.html" class="block hover:bg-[#ff5a3c] px-4 py-2 text-gray-700 hover:text-white">Immigration</a>
-  <a href="practiceAreas/family.html" class="block hover:bg-[#ff5a3c] px-4 py-2 text-gray-700 hover:text-white">Family</a>
-  <a href="practiceAreas/property.html" class="block hover:bg-[#ff5a3c] px-4 py-2 text-gray-700 hover:text-white">Property</a>
-</div>
-
-</div>
-          <a href="attorneys.html" class="hover:text-[#ff5a3c] transition-colors">
-            Attorneys
-            <i class="ml-1 text-[10px] fa-solid fa-angle-down"></i>
-          </a>
-
-         <div class="relative flex items-center gap-1">
-  <!-- Link Page -->
-  <a href="page.html" class="hover:text-[#ff5a3c] transition-colors">
-    Page
-  </a>
-
-  <!-- Nút mũi tên -->
-  <button id="pageArrowBtn" class="transition-colors">
-    <i id="pageArrowIcon" class="text-[10px] transition-transform duration-300 fa-solid fa-angle-up"></i>
-  </button>
-
-  <!-- Dropdown -->
-  <div id="pageMenu" class="hidden top-[40px] left-0 z-10 absolute bg-white shadow-lg rounded-md w-48">
-    <a href="blog.html" class="block hover:bg-[#ff5a3c] px-4 py-2 text-gray-700 hover:text-white">Blog</a>
-    <a href="contact.html" class="block hover:bg-[#ff5a3c] px-4 py-2 text-gray-700 hover:text-white">Contact</a>
-    <a href="faq.html" class="block hover:bg-[#ff5a3c] px-4 py-2 text-gray-700 hover:text-white">FAQ</a>
-    <a href="error.html" class="block hover:bg-[#ff5a3c] px-4 py-2 text-gray-700 hover:text-white">404</a>
-    <a href="coming.html" class="block hover:bg-[#ff5a3c] px-4 py-2 text-gray-700 hover:text-white">Coming Soon</a>
-  </div>
+        <!-- Dropdown -->
+        <div
+          id="practiceMenu"
+          class="hidden top-[40px] left-0 z-10 absolute bg-white shadow-lg rounded-md w-48"
+        >
+          <a
+            href="practiceAreas/divorce.html"
+            class="block hover:bg-[#ff5a3c] px-4 py-2 text-gray-700 hover:text-white"
+            >Divorce</a
+          >
+          <a
+            href="practiceAreasDetail.html"
+            class="block hover:bg-[#ff5a3c] px-4 py-2 text-gray-700 hover:text-white"
+            >Personal Injury</a
+          >
+          <a
+            href="practiceAreas/employment.html"
+            class="block hover:bg-[#ff5a3c] px-4 py-2 text-gray-700 hover:text-white"
+            >Employment</a
+          >
+          <a
+            href="practiceAreas/immigration.html"
+            class="block hover:bg-[#ff5a3c] px-4 py-2 text-gray-700 hover:text-white"
+            >Immigration</a
+          >
+          <a
+            href="practiceAreas/family.html"
+            class="block hover:bg-[#ff5a3c] px-4 py-2 text-gray-700 hover:text-white"
+            >Family</a
+          >
+          <a
+            href="practiceAreas/property.html"
+            class="block hover:bg-[#ff5a3c] px-4 py-2 text-gray-700 hover:text-white"
+            >Property</a
+          >
         </div>
-        </nav>
-
-        <!-- PHONE -->
-        <div class="flex items-center gap-1 text-sm">
-          <span>Call :</span>
-
-          <span class="font-semibold text-[19px]"> (000) 123 456 789 </span>
-        </div>
-
-          <div id="mobile-menu" class="hidden md:hidden bg-white shadow px-5 py-4">
-    <a href="#" class="block py-2 hover:text-[#ff5a3c]">Home</a>
-    <a href="#" class="block py-2 hover:text-[#ff5a3c]">About</a>
-    <a href="#" class="block py-2 hover:text-[#ff5a3c]">Practice Areas</a>
-    <a href="#" class="block py-2 hover:text-[#ff5a3c]">Attorneys</a>
-    <a href="#" class="block py-2 hover:text-[#ff5a3c]">Page</a>
-    <p class="mt-4 text-sm">Call: <span class="font-semibold">(000) 123 456 789</span></p>
-  </div>
-
       </div>
-    </header>
+      <a href="attorneys.html" class="hover:text-[#ff5a3c] transition-colors">
+        Attorneys
+        <i class="ml-1 text-[10px] fa-solid fa-angle-down"></i>
+      </a>
+
+      <div class="relative flex items-center gap-1">
+        <!-- Link Page -->
+        <a href="page.html" class="hover:text-[#ff5a3c] transition-colors">
+          Page
+        </a>
+
+        <!-- Nút mũi tên -->
+        <button id="pageArrowBtn" class="transition-colors">
+          <i
+            id="pageArrowIcon"
+            class="text-[10px] transition-transform duration-300 fa-solid fa-angle-up"
+          ></i>
+        </button>
+
+        <!-- Dropdown -->
+        <div
+          id="pageMenu"
+          class="hidden top-[40px] left-0 z-10 absolute bg-white shadow-lg rounded-md w-48"
+        >
+          <a
+            href="blog.html"
+            class="block hover:bg-[#ff5a3c] px-4 py-2 text-gray-700 hover:text-white"
+            >Blog</a
+          >
+          <a
+            href="contact.html"
+            class="block hover:bg-[#ff5a3c] px-4 py-2 text-gray-700 hover:text-white"
+            >Contact</a
+          >
+          <a
+            href="faq.html"
+            class="block hover:bg-[#ff5a3c] px-4 py-2 text-gray-700 hover:text-white"
+            >FAQ</a
+          >
+          <a
+            href="error.html"
+            class="block hover:bg-[#ff5a3c] px-4 py-2 text-gray-700 hover:text-white"
+            >404</a
+          >
+          <a
+            href="coming.html"
+            class="block hover:bg-[#ff5a3c] px-4 py-2 text-gray-700 hover:text-white"
+            >Coming Soon</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- PHONE -->
+    <div class="flex items-center gap-1 text-sm">
+      <span>Call :</span>
+
+      <span class="font-semibold text-[19px]"> (000) 123 456 789 </span>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow px-5 py-4">
+      <a href="#" class="block py-2 hover:text-[#ff5a3c]">Home</a>
+      <a href="#" class="block py-2 hover:text-[#ff5a3c]">About</a>
+      <a href="#" class="block py-2 hover:text-[#ff5a3c]">Practice Areas</a>
+      <a href="#" class="block py-2 hover:text-[#ff5a3c]">Attorneys</a>
+      <a href="#" class="block py-2 hover:text-[#ff5a3c]">Page</a>
+      <p class="mt-4 text-sm">
+        Call: <span class="font-semibold">(000) 123 456 789</span>
+      </p>
+    </div>
+  </div>
+</header>
+
 <script>
   const arrowBtn = document.getElementById("arrowBtn");
   const practiceMenu = document.getElementById("practiceMenu");
@@ -201,24 +326,24 @@
   const pageArrowIcon = document.getElementById("pageArrowIcon");
 
   // Mobile dropdown Practice Areas
-const mobilePracticeBtn = document.getElementById("mobilePracticeBtn");
-const mobilePracticeMenu = document.getElementById("mobilePracticeMenu");
-const mobilePracticeIcon = document.getElementById("mobilePracticeIcon");
+  const mobilePracticeBtn = document.getElementById("mobilePracticeBtn");
+  const mobilePracticeMenu = document.getElementById("mobilePracticeMenu");
+  const mobilePracticeIcon = document.getElementById("mobilePracticeIcon");
 
-mobilePracticeBtn.addEventListener("click", () => {
-  mobilePracticeMenu.classList.toggle("hidden");
-  mobilePracticeIcon.classList.toggle("rotate-180");
-});
+  mobilePracticeBtn.addEventListener("click", () => {
+    mobilePracticeMenu.classList.toggle("hidden");
+    mobilePracticeIcon.classList.toggle("rotate-180");
+  });
 
-// Mobile dropdown Page
-const mobilePageBtn = document.getElementById("mobilePageBtn");
-const mobilePageMenu = document.getElementById("mobilePageMenu");
-const mobilePageIcon = document.getElementById("mobilePageIcon");
+  // Mobile dropdown Page
+  const mobilePageBtn = document.getElementById("mobilePageBtn");
+  const mobilePageMenu = document.getElementById("mobilePageMenu");
+  const mobilePageIcon = document.getElementById("mobilePageIcon");
 
-mobilePageBtn.addEventListener("click", () => {
-  mobilePageMenu.classList.toggle("hidden");
-  mobilePageIcon.classList.toggle("rotate-180");
-});
+  mobilePageBtn.addEventListener("click", () => {
+    mobilePageMenu.classList.toggle("hidden");
+    mobilePageIcon.classList.toggle("rotate-180");
+  });
   // Dropdown Practice Areas
   arrowBtn.addEventListener("click", function () {
     practiceMenu.classList.toggle("hidden");
@@ -231,35 +356,36 @@ mobilePageBtn.addEventListener("click", () => {
     pageArrowIcon.classList.toggle("rotate-180"); // xoay mũi tên
   });
 
- const menuBtn = document.getElementById("menu-btn");
-const menuIcon = document.getElementById("menu-icon");
-const mobileMenu = document.getElementById("mobile-menu");
-const overlay = document.getElementById("overlay");
+  const menuBtn = document.getElementById("menu-btn");
+  const menuIcon = document.getElementById("menu-icon");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const overlay = document.getElementById("overlay");
 
-menuBtn.addEventListener("click", () => {
-  const isHidden = mobileMenu.classList.contains("hidden");
+  menuBtn.addEventListener("click", () => {
+    const isHidden = mobileMenu.classList.contains("hidden");
 
-  if (isHidden) {
-    mobileMenu.classList.remove("hidden");
-    setTimeout(() => mobileMenu.classList.remove("-translate-x-full"), 10);
-    overlay.classList.remove("hidden");
-    menuIcon.classList.replace("fa-bars", "fa-xmark");
-  } else {
+    if (isHidden) {
+      mobileMenu.classList.remove("hidden");
+      setTimeout(() => mobileMenu.classList.remove("-translate-x-full"), 10);
+      overlay.classList.remove("hidden");
+      menuIcon.classList.replace("fa-bars", "fa-xmark");
+    } else {
+      mobileMenu.classList.add("-translate-x-full");
+      overlay.classList.add("hidden");
+      menuIcon.classList.replace("fa-xmark", "fa-bars");
+      setTimeout(() => mobileMenu.classList.add("hidden"), 500);
+    }
+  });
+
+  // Đóng menu khi bấm overlay
+  overlay.addEventListener("click", () => {
     mobileMenu.classList.add("-translate-x-full");
     overlay.classList.add("hidden");
     menuIcon.classList.replace("fa-xmark", "fa-bars");
     setTimeout(() => mobileMenu.classList.add("hidden"), 500);
-  }
-});
-
-// Đóng menu khi bấm overlay
-overlay.addEventListener("click", () => {
-  mobileMenu.classList.add("-translate-x-full");
-  overlay.classList.add("hidden");
-  menuIcon.classList.replace("fa-xmark", "fa-bars");
-  setTimeout(() => mobileMenu.classList.add("hidden"), 500);
-});
+  });
 </script>
+
 
     <!-- HERO -->
     <main>
@@ -1149,78 +1275,87 @@ overlay.addEventListener("click", () => {
     </section>
     
     </main>
-
-    <!-- Footer Section -->
     <footer class="bg-[#0f1412] py-16 text-white">
-    <div class="gap-8 grid md:grid-cols-4 mx-auto px-5 max-w-[1200px]">
-        <!-- Column 1 -->
-        <div>
-        <h3 class="mb-4 font-semibold text-lg">Justice</h3>
-        <ul class="space-y-2 text-gray-400 text-sm">
-            <li><a href="#" class="hover:text-[#ff593d]">Privacy Policy</a></li>
-            <li><a href="#" class="hover:text-[#ff593d]">Terms & Conditions</a></li>
-            <li><a href="#" class="hover:text-[#ff593d]">Cookie Preferences</a></li>
-        </ul>
-        </div>
-
-        <!-- Column 2 -->
-        <div>
-        <h3 class="mb-4 font-semibold text-lg">Pages</h3>
-        <ul class="space-y-2 text-gray-400 text-sm">
-            <li><a href="#" class="hover:text-[#ff593d]">Home</a></li>
-            <li><a href="#" class="hover:text-[#ff593d]">About</a></li>
-            <li><a href="#" class="hover:text-[#ff593d]">Practice Areas</a></li>
-            <li><a href="#" class="hover:text-[#ff593d]">Attorneys</a></li>
-        </ul>
-        </div>
-
-        <!-- Column 3 -->
-        <div>
-        <h3 class="mb-4 font-semibold text-lg">Justice</h3>
-        <p class="text-gray-400 text-sm leading-relaxed">
-            50 Harrison Street, PH Suite 445<br />
-            Hoboken, NJ 07030<br />
-            (000) 123-4567<br />
-            yourlawfirm22@gmail.com
-        </p>
-        </div>
-
-        <!-- Column 4 (Map) -->
-        <div>
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.987654321!2d-74.032!3d40.743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2576b12345678%3A0xabcdef123456789!2sHoboken%2C%20NJ!5e0!3m2!1sen!2sus!4v1660000000000"
-            width="100%"
-            height="200"
-            style="border:0;"
-            allowfullscreen=""
-            loading="lazy"
-            class="rounded"
-        ></iframe>
-        </div>
+  <div class="gap-8 grid md:grid-cols-4 mx-auto px-5 max-w-[1200px]">
+    <!-- Column 1 -->
+    <div>
+      <h3 class="mb-4 font-semibold text-lg">Justice</h3>
+      <ul class="space-y-2 text-gray-400 text-sm">
+        <li><a href="#" class="hover:text-[#ff593d]">Privacy Policy</a></li>
+        <li><a href="#" class="hover:text-[#ff593d]">Terms & Conditions</a></li>
+        <li><a href="#" class="hover:text-[#ff593d]">Cookie Preferences</a></li>
+      </ul>
     </div>
 
-    <!-- Bottom -->
-    <div class="flex md:flex-row flex-col justify-between items-center mt-12 pt-6 border-gray-700 border-t">
-        <div class="flex flex-col items-start gap-3">
-            <div class="flex items-center gap-3">
-                <i class="text-[#fcfcfc] text-2xl fa-solid fa-gavel"></i>
-                <div>
-                    <p class="font-bold text-lg">Justice</p>
-                    <p class="text-gray-400 text-sm">Law Firm</p>
-                </div>
-            </div>
-              <p class="text-gray-500 text-sm">
-                        Copyright © 2022 UI HUT All Rights Reserved
-              </p>
-        </div>
-        <div class="flex gap-4 mt-4 md:mt-0">
-        <a href="#" class="bg-[#ff593d] hover:bg-[#e94b32] p-2 rounded"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="#" class="bg-[#000] hover:bg-[#e94b32] p-2 rounded"><i class="fa-brands fa-linkedin-in"></i></a>
-        <a href="#" class="bg-[#000] hover:bg-[#e94b32] p-2 rounded"><i class="fa-brands fa-twitter"></i></a>
-        <a href="#" class="bg-[#000] hover:bg-[#e94b32] p-2 rounded"><i class="fa-brands fa-instagram"></i></a>
-        </div>
+    <!-- Column 2 -->
+    <div>
+      <h3 class="mb-4 font-semibold text-lg">Pages</h3>
+      <ul class="space-y-2 text-gray-400 text-sm">
+        <li><a href="#" class="hover:text-[#ff593d]">Home</a></li>
+        <li><a href="#" class="hover:text-[#ff593d]">About</a></li>
+        <li><a href="#" class="hover:text-[#ff593d]">Practice Areas</a></li>
+        <li><a href="#" class="hover:text-[#ff593d]">Attorneys</a></li>
+      </ul>
     </div>
-    </footer>
+
+    <!-- Column 3 -->
+    <div>
+      <h3 class="mb-4 font-semibold text-lg">Justice</h3>
+      <p class="text-gray-400 text-sm leading-relaxed">
+        50 Harrison Street, PH Suite 445<br />
+        Hoboken, NJ 07030<br />
+        (000) 123-4567<br />
+        yourlawfirm22@gmail.com
+      </p>
+    </div>
+
+    <!-- Column 4 (Map) -->
+    <div>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.987654321!2d-74.032!3d40.743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2576b12345678%3A0xabcdef123456789!2sHoboken%2C%20NJ!5e0!3m2!1sen!2sus!4v1660000000000"
+        width="100%"
+        height="200"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        class="rounded"
+      ></iframe>
+    </div>
+  </div>
+
+  <!-- Bottom -->
+  <div
+    class="flex md:flex-row flex-col justify-between items-center mt-12 pt-6 border-gray-700 border-t"
+  >
+    <div class="flex flex-col items-start gap-3">
+      <div class="flex items-center gap-3">
+        <i class="text-[#fcfcfc] text-2xl fa-solid fa-gavel"></i>
+        <div>
+          <p class="font-bold text-lg">Justice</p>
+          <p class="text-gray-400 text-sm">Law Firm</p>
+        </div>
+      </div>
+      <p class="text-gray-500 text-sm">
+        Copyright © 2022 UI HUT All Rights Reserved
+      </p>
+    </div>
+    <div class="flex gap-4 mt-4 md:mt-0">
+      <a href="#" class="bg-[#ff593d] hover:bg-[#e94b32] p-2 rounded"
+        ><i class="fa-brands fa-facebook-f"></i
+      ></a>
+      <a href="#" class="bg-[#000] hover:bg-[#e94b32] p-2 rounded"
+        ><i class="fa-brands fa-linkedin-in"></i
+      ></a>
+      <a href="#" class="bg-[#000] hover:bg-[#e94b32] p-2 rounded"
+        ><i class="fa-brands fa-twitter"></i
+      ></a>
+      <a href="#" class="bg-[#000] hover:bg-[#e94b32] p-2 rounded"
+        ><i class="fa-brands fa-instagram"></i
+      ></a>
+    </div>
+  </div>
+</footer>
+
   </body>
 </html>
 </html>
